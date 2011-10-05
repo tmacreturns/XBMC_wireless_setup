@@ -1,4 +1,4 @@
-abs_top_srcdir=/home/efernandez/XBMC/xbmcStable/xbmc-10.1
+abs_top_srcdir=/home/efernandez/XBMC_wireless/xbmc-10.1
 
 INCLUDES=-I$(abs_top_srcdir) \
 	 -I$(abs_top_srcdir)/guilib \
