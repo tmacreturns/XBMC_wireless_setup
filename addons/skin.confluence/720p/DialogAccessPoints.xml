@@ -1,0 +1,97 @@
+<window type="dialog" id="10141">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+        <controls>
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+                <control type="image">
+				<posx>400r</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+		</control>
+                <control type="list" id="3">
+                        <posx>400r</posx>
+			<posy>100</posy>
+			<width>400</width>
+			<height>620</height>
+                        <onleft>3</onleft>
+                        <onright>3</onright>
+                        <onup>3</onup>
+                        <ondown>3</ondown>
+			<pagecontrol>-</pagecontrol>
+                        <scrolltime>200</scrolltime>
+                        <itemlayout height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>320</posx>
+						<posy>0</posy>
+						<width>40</width>
+						<height>40</height>
+						<info>ListItem.Thumb</info>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<visible>!Control.HasFocus(3)</visible>
+						<texture border="3">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>40</height>
+						<visible>Control.HasFocus(3)</visible>
+						<texture border="3">button-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>320</posx>
+						<posy>0</posy>
+						<width>40</width>
+						<height>40</height>
+						<info>ListItem.Thumb</info>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+                	</control>
+		</control> <!-- Group -->
+        </controls>
+</window>
+

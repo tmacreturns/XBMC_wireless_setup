@@ -1,0 +1,30 @@
+abs_top_srcdir=@abs_top_srcdir@
+
+INCLUDES=-I$(abs_top_srcdir) \
+	 -I$(abs_top_srcdir)/xbmc/cores/dvdplayer/DVDCodecs \
+	 -I$(abs_top_srcdir)/xbmc/cores/dvdplayer \
+	 -I$(abs_top_srcdir)/xbmc/linux \
+	 -I$(abs_top_srcdir)/xbmc/cores \
+	 -I$(abs_top_srcdir)/xbmc \
+	 -I$(abs_top_srcdir)/guilib \
+
+ifneq (@USE_EXTERNAL_FFMPEG@,1)
+  INCLUDES+=-I$(abs_top_srcdir)/xbmc/cores/dvdplayer/Codecs/ffmpeg
+endif
+
+SRCS=	DVDVideoCodecFFmpeg.cpp \
+	DVDVideoCodecLibMpeg2.cpp \
+	DVDVideoPPFFmpeg.cpp \
+	VDPAU.cpp \
+	VAAPI.cpp \
+	DVDVideoCodecVDA.cpp \
+	OpenMax.cpp \
+	DVDVideoCodecOpenMax.cpp \
+	CrystalHD.cpp \
+	DVDVideoCodecCrystalHD.cpp \
+
+LIB=Video.a
+
+include $(abs_top_srcdir)/Makefile.include
+-include $(patsubst %.cpp,%.P,$(patsubst %.c,%.P,$(SRCS)))
+
